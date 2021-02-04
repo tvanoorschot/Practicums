@@ -16,7 +16,6 @@ public class Main {
 
         System.out.println(ajx);
         System.out.println(feij);
-        System.out.println(feij);
     }
 
 }
