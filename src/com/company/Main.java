@@ -1,4 +1,4 @@
-import com.company.Zwembad;
+import com.company.Voetbalclub;
 
 public class Main {
     public static void main(String[] args) {

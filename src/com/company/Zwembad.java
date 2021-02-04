@@ -2,9 +2,9 @@ package com.company;
 
 public class Zwembad {
 
-    public double breedte;
-    public double lengte;
-    public double diepte;
+    private double breedte;
+    private double lengte;
+    private double diepte;
 
     public Zwembad(double breedte, double lengte, double diepte) {
         this.breedte = breedte;
@@ -17,12 +17,12 @@ public class Zwembad {
     }
 
     public double inhoud() {
-        return this.breedte * this.lengte * this.diepte;
+        return breedte * lengte * diepte;
     }
 
     public String toString() {
-        return "Dit zwembad is " + this.breedte + " meter breed, " + this.lengte +
-                " meter lang, en " + this.diepte + " meter diep";
+        return "Dit zwembad is " + breedte + " meter breed, " + lengte +
+                " meter lang, en " + diepte + " meter diep";
     }
 
     public double getBreedte() {
