@@ -8,7 +8,11 @@ public class Voetbalclub {
     private int aantalVerloren;
 
     public Voetbalclub(String naam) {
-        this.naam = naam;
+        if (naam.equals("")) {
+            this.naam = "FC";
+        } else {
+            this.naam = naam;
+        }
     }
 
     public void verwerkResultaat(char ch) {
@@ -31,4 +35,11 @@ public class Voetbalclub {
         return naam + " " + aantalGespeeld() + " " + aantalGewonnen + " " + aantalGelijk + " " + aantalVerloren + " " + aantalPunten();
     }
 
+    public String getNaam() {
+        return naam;
+    }
+
+    public void setNaam(String naam) {
+        this.naam = naam;
+    }
 }
