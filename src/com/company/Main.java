@@ -1,19 +1,23 @@
 package com.company;
 
-import com.company.Cirkel;
+import com.company.Persoon;
+import com.company.Huis;
+
 
 public class Main {
     public static void main(String[] args) {
-        Cirkel c1 = null, c2 = null;
+        Huis h1 = new Huis("Nijenoord 1", 1970);
+        Persoon p1 = new Persoon("Ronald Plasterk", 52);
+        h1.setHuisbaas(p1);
+        System.out.println(h1);
+        System.out.println();
 
-        try {
-            c1 = new Cirkel(10, 0, 0);
-            c2 = new Cirkel(0, 10, 10);
-        } catch (IllegalArgumentException iae) {
-            System.out.println(iae.getMessage());
-        }
-
-        System.out.println(c1);
-        System.out.println(c2);
+        Huis h2 = new Huis("Vredenburg", 1991);
+        Persoon p2 = new Persoon("Annie Brouwers", 59);
+        h2.setHuisbaas(p2);
+        System.out.println(h2);
+        System.out.println();
+        System.out.println("Huisbaas 1: " + h1.getHuisbaas());
+        System.out.println("Huisbaas 2: " + h2.getHuisbaas());
     }
 }
