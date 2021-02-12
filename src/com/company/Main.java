@@ -1,22 +1,19 @@
 package com.company;
 
-import com.company.Voetbalclub;
+import com.company.Cirkel;
 
 public class Main {
     public static void main(String[] args) {
-        Voetbalclub ajx = new Voetbalclub("Ajax      ");
-        Voetbalclub feij = new Voetbalclub("Feijenoord");
+        Cirkel c1 = null, c2 = null;
 
-        feij.verwerkResultaat('w');
-        feij.verwerkResultaat('w');
-        feij.verwerkResultaat('w');
-        feij.verwerkResultaat('g');
+        try {
+            c1 = new Cirkel(10, 0, 0);
+            c2 = new Cirkel(0, 10, 10);
+        } catch (IllegalArgumentException iae) {
+            System.out.println(iae.getMessage());
+        }
 
-        System.out.println("Feijenoord punten: " + feij.aantalPunten());
-        System.out.println("Ajax gespeeld: " + ajx.aantalGespeeld());
-        System.out.println();
-
-        System.out.println(ajx);
-        System.out.println(feij);
+        System.out.println(c1);
+        System.out.println(c2);
     }
 }
